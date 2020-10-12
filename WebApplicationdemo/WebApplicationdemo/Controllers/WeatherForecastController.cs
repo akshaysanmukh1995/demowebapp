@@ -13,7 +13,7 @@ namespace WebApplicationdemo.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching","cloudy","sunshine"
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
@@ -35,5 +35,12 @@ namespace WebApplicationdemo.Controllers
             })
             .ToArray();
         }
+
+        [HttpPost]
+        public void Post()
+        {
+            Console.WriteLine("posted data");
+        }
+
     }
 }
